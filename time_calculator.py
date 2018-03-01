@@ -3,8 +3,11 @@ from django.utils import timezone
 
 
 # returns the date after given days
-def days_hence(d=1):
-    return timezone.now() + timezone.timedelta(days=d)
+# if true is passed, hence will be calculated backwords
+def days_hence(d=1, back=False):
+    if back:
+        return datetime.datetime.now() - datetime.timedelta(days=d)
+    return datetime.datetime.now() + datetime.timedelta(days=d)
 
 
 # Ensure age of at least 18 years old.

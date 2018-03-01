@@ -1,6 +1,6 @@
 First of all you need to import datetime<br>
 
-<h4>Days from today</h4>h4>
+<h4>Days from today</h4>
 Returns the date after given days. If true is passed, hence will be calculated backwords
 
 <h5>Example 1:</h5>

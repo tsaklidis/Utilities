@@ -1,7 +1,6 @@
-# time_calculator.py
 First of all you need to import datetime<br>
 
-# Days from today
+<h4>Days from today</h4>h4>
 Returns the date after given days. If true is passed, hence will be calculated backwords
 
 <h5>Example 1:</h5>
@@ -19,8 +18,9 @@ calculate_back = True
 days_hence(5, calculate_back)
 ```
 
-# Ensure age of at least 18 years old.
+<h4>Ensure age of at least 18 years old.</h4>h4>
 <h5>Example 1:</h5>
+Find if the given birthdate is adult. Default adult years are 18.
 
 ```python
 sample_date = datetime.date(1987, 8, 13)

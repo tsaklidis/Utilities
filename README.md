@@ -1,10 +1,11 @@
-# Utilities Info File
+# Info
 Python utilities in order to make your <i>coding</i> life easier<hr>
 Some of the functions, are unable to run as a single python code so you have to create <a href='https://www.djangoproject.com/start/'>Django</a> project.
+
 <hr>
-<br>
 # time_calculator.py
 First of all ou need to import datetime<br>
+
 # Days from today
 Returns the date after given days. If true is passed, hence will be calculated backwords
 

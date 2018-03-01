@@ -1,5 +1,5 @@
 import datetime
-from django.utils import timezone
+# from django.utils import timezone
 
 
 # returns the date after given days
@@ -10,7 +10,7 @@ def days_hence(d=1, back=False):
     return datetime.datetime.now() + datetime.timedelta(days=d)
 
 
-# Ensure age of at least 18 years old.
+# Ensure if the given age is adult, default is 18
 # birth_date = datetime.date(1987, 8, 13)
 def is_adult(birth_date=None, y=18):
     today = datetime.datetime.now().date()

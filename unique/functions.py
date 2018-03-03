@@ -1,10 +1,21 @@
 import hashlib
 import datetime
 
+# Create a random string based on timestamp
+# Don't overload your system over get_random_string(1000000) 
+def get_random_string(length=8, valid_chars=False):
+    u = ''
+    while True:
+        if len(u) < length:
+            salt = hashlib.sha256(str(datetime.datetime.now())).hexdigest()
+            if valid_chars:
+                pass
+            else:
+                u += hashlib.sha1(salt).hexdigest()
+        else:
+            break
+    return u[:length]
 
-def unique_id(length=8):
-    salt = hashlib.sha1(str(datetime.datetime.now())).hexdigest()[:5]
-    return hashlib.sha1(salt).hexdigest()[:length]
 
 # import string, time, math, random
 

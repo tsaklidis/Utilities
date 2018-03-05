@@ -1,5 +1,6 @@
 import string
 import random
+import re
 
 
 def password_generator(size=6, chars=string.ascii_lowercase + string.digits):

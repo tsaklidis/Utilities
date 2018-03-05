@@ -1,7 +1,7 @@
 Create random unique string<br>
 
 <h4>get_random_string</h4>
-Returns a random unique string. Uniquines is based on timestamp. Default length is 8.
+Returns a random unique string. Uniquines is based on timestamp. Default length is 8.<br>
 Argumentrs: length, prefix, suffix, invalid_chars
 
 <h5>Example 1:</h5>

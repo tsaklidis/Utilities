@@ -12,7 +12,7 @@ def get_random_string(length=8, prefix='', suffix='', invalid_chars=False):
             u += hashlib.sha1(salt).hexdigest()
         else:
             break
-    if invalid_chars:
+    if invalid_chars and isinstance(invalid_chars, str):
         for ch in invalid_chars:
             u = u.replace(ch, "")
     return '{0}{1}{2}'.format(prefix, u[:length], suffix)

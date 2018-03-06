@@ -16,6 +16,7 @@ class Allow():
         return data
 
     def numbers(self, data):
+        # Allow only numbers
         if not re.match(r'(^[\d]+$)', data, re.UNICODE):
             return False
         return data

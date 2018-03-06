@@ -54,6 +54,7 @@ class Allow():
 
         return {
             'ok': password_ok,
+            'Password': data,
             'Length': length_error,
             'Digit': digit_error,
             'Uppercase': uppercase_error,

@@ -1,6 +1,6 @@
 <h4>Sanitize user's input</h4>
 All functions return the data if all checks are ok.<br>
-If there is any strange character that doesn't match, false is returned
+If there is any strange character that doesn't match, False is returned
 
 <h5>Example 1:</h5>
 
@@ -16,7 +16,7 @@ if username:
 ```
 
 
-<h5>Example 1:</h5>
+<h5>Example 2:</h5>
 Check for string password
 
 ```python

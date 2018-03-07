@@ -5,33 +5,35 @@ If there is any strange character that doesn't match, False is returned
 <h5>Example 1:</h5>
 
 ```python
-sanizite = Allow()
+sanitize = Allow()
 data = 'rocky_99'
 username = sanitize.alphanumeric(data)
 
 if username:
-	print 'Username is ok'
-	# Register user 
+    print 'Username is ok'
+    # Register user 
 
 ```
 
 
 <h5>Example 2:</h5>
-Check for string password
+Check for password strength. If password is strength (check function comments),<br>
+the same password is returned. Otherwise a dict with info is returned
+
 
 ```python
-sanizite = Allow()
+strength = Allow()
 data = 'p@as$wor!2'
-password = sanitize.alphanumeric(data)
+password = strength.password_check(data)
+msg_str = ''
 
-if password['ok']:
-	print 'Password is strong'
-	# Allow password for use
+if password == data:
+    msg_str = 'Password is strong'
+    # Allow password for use
 else:
-	msg_str = ''
-	for msg in results:
-	    if results[msg]:
-	        msg_str += msg + ', '
-	print "Password must include: {0}".format(msg_str)) 
+    for msg in password:
+        if password[msg]: # Password should be like True keys
+            msg_str += msg + ', '
+    print "Password must include: {0}".format(msg_str)
 
 ```

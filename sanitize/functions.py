@@ -52,10 +52,11 @@ class Allow():
             length_error or digit_error or uppercase_error or
             lowercase_error or symbol_error
         )
-
+        if password_ok:
+            return data
         return {
+            # 'Password': data, # uncoment if password is need
             'ok': password_ok,
-            'Password': data,
             'Length': length_error,
             'Digit': digit_error,
             'Uppercase': uppercase_error,

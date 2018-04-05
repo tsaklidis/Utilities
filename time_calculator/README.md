@@ -18,7 +18,7 @@ calculate_back = True
 days_hence(5, calculate_back)
 ```
 
-<h4>Ensure age of at least 18 years old.</h4>h4>
+<h4>Ensure age of at least 18 years old.</h4>
 <h5>Example 1:</h5>
 Find if the given birthdate is adult. Default adult years are 18.
 

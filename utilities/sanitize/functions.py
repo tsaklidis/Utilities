@@ -1,7 +1,7 @@
 import re
 
 
-class Allow():
+class Allow:
 
     def alphanumeric(self, data):
         # Allow letters, numbers and underspace
@@ -48,18 +48,18 @@ class Allow():
             r"[ !#$%&'()*+,-./[\\\]^_`{|}~" + r'"]', data) is None
 
         # result
-        password_ok = not (
+        password_invalid = (
             length_error or digit_error or uppercase_error or
             lowercase_error or symbol_error
         )
-        if password_ok:
-            return data
-        return {
-            # 'Password': data, # uncoment if password is need
-            'ok': password_ok,
-            'Length': length_error,
-            'Digit': digit_error,
-            'Uppercase': uppercase_error,
-            'Lowercase': lowercase_error,
-            'Symbol': symbol_error,
-        }
+        if password_invalid:
+            return {
+                # 'Password': data, # uncoment to return password too.
+                'Invalid': password_invalid,
+                'Length': length_error,
+                'Digit': digit_error,
+                'Uppercase': uppercase_error,
+                'Lowercase': lowercase_error,
+                'Symbol': symbol_error,
+            }
+        return data

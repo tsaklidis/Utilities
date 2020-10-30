@@ -7,7 +7,7 @@ from django.core.mail import EmailMultiAlternatives
 
 def send_custom_mail(ctx, subject_path, template_path, recipients):
     # recipients must be list (array) ['info@example.com']
-    # settings.FROM u'S.I.Tsaklidis <techsupport@tsaklidis.gr'
+    # settings.FROM u'S.I.Tsaklidis <sefanos@tsaklidis.gr'
 
     text_content = u''
     if 'False' in recipients:

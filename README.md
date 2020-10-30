@@ -91,7 +91,7 @@ calculate_back = True
 days_hence(5, calculate_back)
 ```
 
-<h4>Ensure age of at least 18 years old.</h4>h4>
+<h4>Ensure age of at least 18 years old.</h4>
 <h5>Example 1:</h5>
 Find if the given birthdate is adult. Default adult years are 18.
 
@@ -110,3 +110,14 @@ is_adult(sample_date, adult_years)
 ```
 
 In some countries adultd age differs, so pass the years you need
+
+<hr>
+
+<h4>Make requests to external sites</h4>
+
+<h5>Example 1:</h5>
+Make a request and return the answer in json format. Chech function definition for more.
+
+```python
+send_request('GET', 'some/api/', return_json=True, debug=True)
+```
